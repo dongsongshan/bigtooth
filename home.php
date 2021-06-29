@@ -1,13 +1,17 @@
 <?php get_header(); ?>
-<?php bloginfo( 'name' ); ?>
-<?php bloginfo( 'version' ); ?>
-<?php echo '<hr>这是index.php模版<hr>'; ?>
 <?php
 if ( have_posts() ) :
     while ( have_posts() ) :
+        the_post();
+        echo "<a href='";
+        the_permalink();
+        echo "'>";
+        the_title();
+        echo "</a>";
+
     
-    the_post();
-    the_content();
+    echo "<hr>";
+    
     endwhile;
     else :
         _e( 'Sorry, no posts matched your criteria.', 'devhub' );
