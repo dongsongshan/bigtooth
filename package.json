@@ -4,7 +4,8 @@
   "description": "a wordpress theme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss tailwind.css -o style.css"
   },
   "repository": {
     "type": "git",
@@ -26,11 +27,11 @@
     "style-loader": "^3.0.0",
     "tailwindcss": "^2.2.4",
     "webpack": "^5.41.1",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.7.2",
+    "postcss-cli": "^8.3.1"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
-    "postcss-cli": "^8.3.1"
+    "lodash": "^4.17.21"
   },
   "browserslist": [
     "last 10 versions"
