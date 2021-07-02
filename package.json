@@ -1,0 +1,38 @@
+{
+  "name": "bigtooth",
+  "version": "1.0.0",
+  "description": "a wordpress theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dongsongshan/bigtooth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dongsongshan/bigtooth/issues"
+  },
+  "homepage": "https://github.com/dongsongshan/bigtooth#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "css-loader": "^5.2.6",
+    "mini-css-extract-plugin": "^1.6.2",
+    "postcss": "^8.3.5",
+    "postcss-loader": "^6.1.0",
+    "style-loader": "^3.0.0",
+    "tailwindcss": "^2.2.4",
+    "webpack": "^5.41.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "postcss-cli": "^8.3.1"
+  },
+  "browserslist": [
+    "last 10 versions"
+  ]
+}
