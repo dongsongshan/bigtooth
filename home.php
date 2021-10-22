@@ -3,18 +3,24 @@
 
 
 
-<div class="container mx-auto">
+<div class="container md:w-3/5 mx-auto">
 <?php
 echo "<ul class='bg-rose-200 leading-loose py-12 divide-y divide-gray-200 divide-dashed'>";
 if ( have_posts() ) :
     while ( have_posts() ) :
         the_post();
         
-        echo "<li class=''><a class='block py-2' href='";
+        echo "<li class='flex flex-row justify-between'><a class='block py-2' href='";
         the_permalink();
         echo "'>";
         the_title();
-        echo "</a></li>";
+        // the_title_attribute();
+        echo "</a><span class='py-2'>";
+        the_date();
+        the_time();
+        // the_post_thumbnail(); 
+        the_category( ', ' );
+        echo "</span></li>";
     
     endwhile;
 

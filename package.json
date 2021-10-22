@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "postcss tailwind.css -o style.css"
+    "dev": "babel-node ./src/copy.js",
+    "build": "webpack && copyfiles -f dist/style.css ../bigtooth",
+    "copy": "copyfiles -fV dist/index.html out"
   },
   "repository": {
     "type": "git",
@@ -19,18 +21,24 @@
   },
   "homepage": "https://github.com/dongsongshan/bigtooth#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.15.8",
     "autoprefixer": "^10.2.6",
+    "copyfiles": "^2.4.1",
     "css-loader": "^5.2.6",
-    "mini-css-extract-plugin": "^1.6.2",
-    "postcss": "^8.3.5",
+    "html-webpack-plugin": "^5.4.0",
+    "mini-css-extract-plugin": "^2.4.3",
     "postcss-loader": "^6.1.0",
     "style-loader": "^3.0.0",
+    "stylelint-webpack-plugin": "^3.0.1",
     "tailwindcss": "^2.2.4",
     "webpack": "^5.41.1",
-    "webpack-cli": "^4.7.2",
-    "postcss-cli": "^8.3.1"
+    "webpack-cli": "^4.7.2"
   },
   "dependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/node": "^7.15.8",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^9.0.1",
     "lodash": "^4.17.21"
   },
   "browserslist": [

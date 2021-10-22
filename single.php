@@ -1,5 +1,13 @@
-<?php get_header(); ?>
-    <div class="container mx-auto">
+<?php
+/**
+ * 文章详情页
+ * 单页面
+ */
+get_header(); ?>
+    <div class="container md:w-3/5 mx-auto">
+        <div class="text-xl">
+            <?php the_title();?>
+        </div>
         <main id="main" class="site-main" role="main">
   
         <?php
